@@ -14,4 +14,16 @@ public class CalculatorTest {
 		testee = new Calculator();
 		assertTrue(testee.summe(10, 25) == 35);
 	}
+	
+	@Test
+	public void testSubZweiPositiveIsOk() {
+		testee = new Calculator();
+		assertTrue(testee.minus(50, 25) == 25);
+	}
+	
+	@Test
+	public void testSubZweiPositiveIsWrong(){
+		testee = new Calculator();
+		assertTrue(testee.minus(20, 88) != 88);
+	}
 }
